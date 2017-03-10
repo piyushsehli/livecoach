@@ -10,13 +10,14 @@
     <title>LiveCoach.io</title>
     
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/custom.css">
-    <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/css/own.css">
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
    
     <!-- Scripts -->
     <script type="text/javascript" src="/js/jquery.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/own.js"></script>
     <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),

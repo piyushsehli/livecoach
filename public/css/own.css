@@ -1,0 +1,470 @@
+/* Navbar section */
+
+.navbar{
+	background:#fff;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    border-top: 0px solid rgba(47, 46, 46, 1);
+    border-bottom: 0px solid rgba(47, 46, 46, 1);
+    padding:10px 40px;
+    margin-bottom: 0px;
+}
+#navbar{
+	position:relative;
+	top:5px;
+}
+.navbar-inverse .navbar-nav>li>a{
+	color:#000;
+	letter-spacing: 2px;
+	font-size:15px;
+	text-transform: capitalize;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+	color: #57BBBF;
+}
+.navbar-brand{
+	padding:0px;
+}
+.navbar-brand img{
+	width:87px;
+	height:45px;
+	display:inline;
+}
+.navbar-inverse .navbar-brand {
+	color:#000;
+}
+.navbar-inverse .navbar-brand:hover{
+	color:#57BBBF;
+}
+.navbar-brand h5{
+	position:relative;
+	top:9px;
+	display:inline;
+	margin-left:15px;
+	margin-top:5px;
+	font-weight: bold;
+	font-size: 18px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.login{
+	font-size: 18px !important;
+	color:#FFA600 !important;
+	text-transform: uppercase !important;
+	font-weight: bold;
+}
+
+/* Hero section */
+#hero{
+	background:url('/images/back.png');
+	padding-top:120px;
+	padding-bottom:250px;
+}
+.main-tag-line{
+	margin-bottom:30px;
+}
+.main-tag-line h1{
+	color:#000;
+	word-wrap: break-word;
+	font-size:80px;
+	font-weight:bold;
+	text-align:center;
+	text-transform: uppercase;
+	letter-spacing: 9px;
+	line-height:normal;
+}
+.sec-tag-line{
+	text-align:center;
+}
+.sec-tag-line h4{
+	letter-spacing: 3px;
+}
+.specific-color{
+	color:#FFA600;
+}
+.btn-register{
+	margin:35px auto;
+	background:#000;
+	color:#fff;
+	letter-spacing: 2px;
+	font-size: 15px;
+	line-height: 30px;
+	text-transform: uppercase;
+	border:1px solid #000;
+}
+
+/* Features */
+#features{
+	padding:70px 0px 35px 0px;
+}
+.feature-tagline{
+	color: rgb(48, 120, 190);
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 30px;
+    letter-spacing: 5px;
+    line-height: 40px;
+}
+.feature-tagline::after{
+	content:'';
+	background-color: #000;
+	width:90px;
+	height:3px;
+	margin:15px auto;	
+	display: block;
+}
+.feature-desc{
+	padding:20px;
+	width:80%;
+	margin:auto;
+	text-align: center;
+	letter-spacing: 2px;
+}
+.feature-list{
+	padding:15px 0px;
+}
+.feature-one{
+	text-align: center;
+}
+.feature-one img{
+	padding:15px 0px;
+}
+.feature-one h3{
+	 width:80%;
+	 margin:auto;
+	 color:#3078BE;
+	 font-size: 18px;
+	 font-weight: bold;
+	 letter-spacing: 2px;
+	 text-transform: uppercase;
+}
+.feature-one p{
+	width:80%;
+	margin:auto;
+	text-align: justify;
+	padding:15px 0px;
+	font-weight: normal;
+	letter-spacing:1px;
+}
+.feature-list button{
+	margin:35px auto 15px auto;
+	background:#000;
+	color:#fff;
+	letter-spacing: 2px;
+	font-size: 15px;
+	line-height: 30px;
+	text-transform: uppercase;
+	border:1px solid #000;
+}
+
+/* Testi */
+#testi{
+	background:#f4eab1;
+	padding:55px 0px 25px 0px;
+}
+#testi h1{
+	font-weight: bold;
+	font-size:30px;
+	text-transform: uppercase;
+	color:#000;
+	text-align: center;
+	letter-spacing: 3px;
+}
+#testi h1::after{
+	content:'';
+	background-color: #000;
+	width:90px;
+	height:3px;
+	margin:15px auto;	
+	display: block;
+}
+
+/* Corousal */
+/* carousel */
+#quote-carousel 
+{
+  padding: 0 10px 30px 10px;
+  margin-top: 30px;
+}
+
+/* Control buttons  */
+#quote-carousel .carousel-control
+{
+  background: none;
+  color: #222;
+  font-size: 2.3em;
+  text-shadow: none;
+  margin-top: 30px;
+}
+/* Previous button  */
+#quote-carousel .carousel-control.left 
+{
+  left: -12px;
+}
+/* Next button  */
+#quote-carousel .carousel-control.right 
+{
+  right: -12px !important;
+}
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators 
+{
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li 
+{
+  background: #c0c0c0;
+}
+#quote-carousel .carousel-indicators .active 
+{
+  background: #333333;
+}
+#quote-carousel img
+{
+  width: 250px;
+  height: 100px
+}
+/* End carousel */
+
+.item blockquote {
+    border-left: none; 
+    margin: 0;
+}
+
+.item blockquote img {
+    margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+.testi-desc{
+	background-color: #fff !important;
+	padding:15px 10px;
+}
+.testi-desc::after {
+	content: '';
+	display: block;  
+	position: absolute;
+	right: 100%;
+	top: 35%;
+	margin-top: -10px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-right: 10px solid white;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid transparent;
+}
+.testi-btn{
+	color:#fff;
+	margin:10px auto;
+	background:rgba(0,0,0,0.7);
+	border:1px solid #000;
+	border-radius:5px;
+	letter-spacing: 2px;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 26px;
+}
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #quote-carousel 
+    {
+      margin-bottom: 0;
+      padding: 0 40px 30px 40px;
+    }
+    
+}
+
+/* Small devices (tablets, up to 768px) */
+@media (max-width: 768px) { 
+    
+    /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+    
+    #quote-carousel .carousel-indicators {
+        bottom: -20px !important;  
+    }
+    #quote-carousel .carousel-indicators li {
+        display: inline-block;
+        margin: 0px 5px;
+        width: 15px;
+        height: 15px;
+    }
+    #quote-carousel .carousel-indicators li.active {
+        margin: 0px 5px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+
+/* Services */
+
+#services{
+	padding:70px 25px 15px 25px ;
+}
+#services h1{
+	width:70%;
+	text-align: center;
+	color: rgb(48, 120, 190);
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin:auto;
+}
+#services h1::after{
+	content:'';
+	background-color: #000;
+	width:70px;
+	height:3px;
+	margin:15px auto;	
+	display: block;
+}
+#services p{
+	color:#605E5E;
+	width:40%;
+	margin:25px auto 35px auto;
+	text-align: center;
+	line-height: 25px;
+	letter-spacing: 1px;
+	font-weight: normal;
+	font-size: 14px;
+}
+.single-feature{
+	width:25%;	
+	padding:15px 0px;
+	margin:0% 4% 0% 4%;
+	display: inline-block;
+	min-height:300px;
+}
+.row-own{
+	width:100%;
+}
+.single-feature h3{
+	 text-align: center;
+	 color:#3078BE;
+	 font-size: 18px;
+	 font-weight: bold;
+	 letter-spacing: 2px;
+	 text-transform: uppercase;
+}
+.single-feature ul{
+	width:90%;
+	margin:auto;
+}
+
+/* Who */
+#who{
+	background:url('/images/who.png');
+	padding:70px 0px 25px 0px;
+}
+#who h1{
+	width:70%;
+	text-align: center;
+	color: rgb(0,0,0);
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin:auto;
+}
+#who h1::after{
+	content:'';
+	background-color: #000;
+	width:70px;
+	height:3px;
+	margin:15px auto;	
+	display: block;
+}
+.who-desc{
+	width:60%;
+	margin:auto;
+	line-height: 25px;
+	letter-spacing: 2px;
+	text-align: justify;
+	color:#000;
+}
+.who-desc p{
+	margin:25px 0px;
+}
+
+/* Trials form */
+
+#trials-form{
+	background:#bafcff;
+	padding:70px 0px 25px 0px;
+}
+#trials-form h1{
+	text-align: center;
+	color: rgb(0, 0, 0);
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+#trials-form h1::after{
+	content:'';
+	background-color: #000;
+	width:70px;
+	height:3px;
+	margin:15px auto;	
+	display: block;
+}
+#trials-form p{
+	color:#605E5E;
+	width:40%;
+	margin:25px auto;
+	text-align: justify;
+	line-height: 25px;
+	letter-spacing: 1px;
+	font-weight: normal;
+	font-size: 14px;
+}
+.actual-form{
+	width:40%;
+	margin:auto;
+}
+.form-groups{
+	margin-top: 25px;
+}
+form{
+	width:100%;
+}
+.form-group-trial{
+	width:100%;
+	margin-bottom: 15px;
+}
+.trail-label{
+	padding: 0 15px 5px 0;
+	text-align: right;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: normal;
+	width:20%;
+}
+.trial-input{
+	padding: 0 15px 5px 0;
+	width:78%;
+	height: 35px;
+	border: 2px solid #000;
+	background:#bafcff;
+}
+textarea.trial-input{
+	height: 150px;
+}
