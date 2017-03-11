@@ -10,4 +10,8 @@ $(document).ready(function() {
   $("#login-btn").click(function(){
         $("#login").modal('show');
     });
+	$("#sign-up").click(function(){
+        $("#signup").modal('show');
+    });
+  
 });

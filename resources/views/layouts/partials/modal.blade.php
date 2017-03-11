@@ -54,7 +54,7 @@
                     <div class="modal-body">
                         <!-- Project Details Go Here -->
                         <div class="modal-heading">
-                            <h2>Sign up</h2>
+                            <h2>Log in</h2>
                         </div>
                         <div class="container signup-content">
                             <div class="row">
@@ -65,7 +65,7 @@
                                         <button class="sign-button">GO</button>
                                     </form>
                                     <div class="row">
-                                        <p class="para-login">Not a user,<a href="#">sign up</a></p>
+                                        <p class="para-login">Not a user,<a href="#signup" id="sign-up">sign up</a></p>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 specific-btn-con">
