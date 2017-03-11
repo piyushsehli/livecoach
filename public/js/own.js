@@ -4,4 +4,10 @@ $(document).ready(function() {
     pause: true,
     interval: 3000,
   });
+  $(".signup-btn").click(function(){
+        $("#signup").modal('show');
+    });
+  $("#login-btn").click(function(){
+        $("#login").modal('show');
+    });
 });

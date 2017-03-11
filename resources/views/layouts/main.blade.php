@@ -22,6 +22,7 @@
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
         ]); ?>
+        
     </script>
 </head>
 <body>
@@ -29,6 +30,7 @@
 <div id="app">
     @yield('content')
 </div>
+@include('layouts.partials.modal')
 @include('layouts.partials.footer')
 </body>
 </html>

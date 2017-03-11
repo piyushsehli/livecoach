@@ -16,7 +16,7 @@
             <li><a href="#contact">For Coaches</a></li>
             <li><a href="#contact">FAQ</a></li>
             <li><a href="#contact">Contact Us</a></li>
-            <li><a href="#contact" class="login">Login/Signup</a></li>
+            <li><a href="#signup" class="login signup-btn">Login/Signup</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

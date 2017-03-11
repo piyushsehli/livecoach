@@ -468,3 +468,122 @@ form{
 textarea.trial-input{
 	height: 150px;
 }
+
+
+/* Portfolio */
+.signup-modal{
+}
+
+.signup-modal .modal-content{
+	border-radius:0;
+	background-clip:border-box;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+	border:0;
+	min-height:100%;
+	padding:100px 0;
+	text-align:center
+}
+.signup-modal .close-modal{
+	position:absolute;
+	width:75px;
+	height:75px;
+	background-color:transparent;
+	top:25px;
+	right:25px;
+	cursor:pointer
+}
+.signup-modal .close-modal:hover{
+	opacity:.3
+}
+.signup-modal .close-modal .lr{
+	height:75px;
+	width:1px;
+	margin-left:35px;
+	background-color:#222;
+	transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	z-index:1051
+}
+.signup-modal .close-modal .lr .rl{
+	height:75px;
+	width:1px;
+	background-color:#222;
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	z-index:1052
+}
+.signup-modal .modal-backdrop{
+	opacity:0;
+	display:none
+}
+.modal-heading h2{
+	font-size: 56px;
+	text-align: center;
+	text-transform: capitalize;
+}
+.signup-content{
+	margin:50px 20px;
+}
+.specific-form{
+	border-right: 1px solid #000;
+}
+.specific-form form{
+	margin:15px 53px 0px 50px;
+}
+.sign-input{
+	width:65%;
+	height: 48px;
+    font-size: 14px;
+    font-family: Helvetica;
+    font-weight: 300;
+    color: #000;
+    line-height: 14px;
+    text-align: left;
+    border:1px solid #000;
+    padding: 0 12px;
+    margin:9px 0px;
+}
+.sign-button{
+	width:65%;
+	height: 48px;
+    font-size: 14px;
+    font-family: Helvetica;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    line-height: 14px;
+    border:1px solid #000;
+    padding: 0 12px;
+    background-color: #000;
+}
+.para-login{
+	width:65%;
+	text-align: center;
+	line-height: 48px;
+}
+
+.sign-btn{
+	line-height: 48px;
+    width: 65%;
+    margin:auto;
+    font-family: Helvetica;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+    cursor: pointer;
+    margin:10px 0px;
+}
+.face{
+	background:#4f69a2;
+	border:1px solid #4f69a2;
+}
+.google{
+	background:#e53935;
+	border:1px solid #e53935;
+}
+.specific-btn-con{
+	margin:12px 0px 2px -53px;
+}
