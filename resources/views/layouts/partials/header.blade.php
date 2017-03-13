@@ -16,7 +16,22 @@
             <li><a href="#contact">For Coaches</a></li>
             <li><a href="#contact">FAQ</a></li>
             <li><a href="#contact">Contact Us</a></li>
-            <li><a href="#signup" class="login signup-btn">Login/Signup</a></li>
+            @if(Auth::check())
+                  <li><a href="javascript:void(0);" class="login " >Hi {{ Auth::user()->name }}</a></li>
+                  <li>
+                        <a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                    <i class="fa fa-sign-out"></i>
+                                    Logout
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                        </form>
+                  </li>
+            @else
+                  <li><a href="#signup" class="login signup-btn">Login/Signup</a></li>
+            @endif
           </ul>
         </div><!--/.nav-collapse -->
       </div>

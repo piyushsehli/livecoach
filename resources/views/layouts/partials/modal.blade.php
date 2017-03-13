@@ -17,19 +17,18 @@
                         <div class="container signup-content">
                             <div class="row">
                                 <div class="col-sm-6 specific-form">
-                                    <form class="row">
-                                        <input type="Email" class="sign-input" placeholder="Email"></input>
-                                        <input type="password" class="sign-input" placeholder="Password"></input>
-                                        <input type="password" class="sign-input" placeholder="Re-Type Password"></input>
-                                        <button class="sign-button">GO</button>
-                                    </form>
+                                    <register-form></register-form>
                                     <div class="row">
                                         <p class="para-login">I'm already a user,<a href="#login-btn" id="login-btn">log in</a></p>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 specific-btn-con">
-                                    <button class="sign-btn face">Sign up with Facebook</button>
-                                    <button class="sign-btn google">Sign up with Google</button>
+                                    <a href="{{ route('login.facebook') }}">
+                                        <button class="sign-btn face">Sign up with Facebook</button>
+                                    </a>
+                                    <a href="{{ route('login.google') }}">
+                                        <button class="sign-btn google">Sign up with Google</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -59,11 +58,7 @@
                         <div class="container signup-content">
                             <div class="row">
                                 <div class="col-sm-6 specific-form">
-                                    <form class="row">
-                                        <input type="Email" class="sign-input" placeholder="Email"></input>
-                                        <input type="password" class="sign-input" placeholder="Password"></input>
-                                        <button class="sign-button">GO</button>
-                                    </form>
+                                    <login-form></login-form>
                                     <div class="row">
                                         <p class="para-login">Not a user,<a href="#signup" id="sign-up">sign up</a></p>
                                     </div>
