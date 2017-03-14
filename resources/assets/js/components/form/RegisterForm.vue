@@ -15,7 +15,7 @@
 </template>
 
 <script>
-    import Form from '../form/Form';
+    import Form from '../../form/Form';
     export default {
         data(){
             return {

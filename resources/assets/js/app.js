@@ -13,8 +13,7 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('login-form', require('./components/LoginForm.vue'));
-Vue.component('register-form', require('./components/RegisterForm.vue'));
+require('./conponents');
 
 const app = new Vue({
     el: '#app'
