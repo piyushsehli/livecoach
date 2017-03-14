@@ -34,7 +34,11 @@
         methods: {
             onSubmit(){
                 this.form.post(this.url).then(res => {
-                    alert(res)
+                    swal({
+                        title: 'Success',
+                        text: "Confirmation Email has been sent to you",
+                        type: 'success'
+                    });
                 })
             }
         }

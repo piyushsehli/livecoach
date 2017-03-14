@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\CoachAuth;
 
 use Auth;
 use Mail;
-use App\User;
+use App\Coach;
 use Illuminate\Http\Request;
 use App\Mail\UserConfirmationEmail;
 use App\Http\Controllers\Controller;
@@ -55,7 +55,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => 'required',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
+            'password' => 'required|min:4|confirmed',
         ]);
     }
 
@@ -67,11 +67,29 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        return Coach::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    /**
+     * Handle a registration request for the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+
+        event(new Registered($user = $this->create($request->all())));
+
+        $this->guard('coach')->login($user);
+
+        return $this->registered($request, $user)
+                        ?: redirect($this->redirectPath());
     }
 
     /**
@@ -89,7 +107,7 @@ class RegisterController extends Controller
             'token' => str_random(128)
         ]);
 
-        $email = new UserConfirmationEmail($user, $token);
+        $email = new CoachConfirmationEmail($user, $token);
         Mail::to($request->input('email'))->send($email);
 
         return 'success';

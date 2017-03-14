@@ -5,9 +5,11 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class Coach extends Authenticatable
 {
     use Notifiable;
+
+    protected $guard = 'coach';
 
     /**
      * The attributes that are mass assignable.
@@ -26,10 +28,4 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    /*Relationships*/
-    public function activationToken()
-    {
-        return $this->hasOne(ActivationToken::class);
-    }
 }

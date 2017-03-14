@@ -9,11 +9,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>LiveCoach.io</title>
     
+    <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="/css/app.css">
     <link rel="stylesheet" type="text/css" href="/css/own.css">
     <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
    
-    <!-- Scripts -->
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([

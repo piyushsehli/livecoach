@@ -41,6 +41,11 @@ return [
             'provider' => 'users',
         ],
 
+        'coach' => [
+            'driver' => 'session',
+            'provider' => 'coaches',
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -70,10 +75,10 @@ return [
             'model' => App\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'coaches' => [
+            'driver' => 'eloquent',
+            'model' => App\Coach::class,
+        ],
     ],
 
     /*
@@ -94,6 +99,11 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'coaches' => [
+            'provider' => 'coaches',
             'table' => 'password_resets',
             'expire' => 60,
         ],

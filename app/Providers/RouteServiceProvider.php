@@ -39,6 +39,11 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
+        $this->mapUserRoutes();
+
+        $this->mapCoachRoutes();
+
+
         //
     }
 
@@ -54,6 +59,34 @@ class RouteServiceProvider extends ServiceProvider
         Route::middleware('web')
              ->namespace($this->namespace)
              ->group(base_path('routes/web.php'));
+    }
+
+    /**
+     * Define the "web" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @return void
+     */
+    protected function mapUserRoutes()
+    {
+        Route::middleware(['web','auth'])
+             ->namespace($this->namespace)
+             ->group(base_path('routes/user/init.php'));
+    }
+
+    /**
+     * Define the "web" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @return void
+     */
+    protected function mapCoachRoutes()
+    {
+        Route::middleware(['web','auth:coach'])
+             ->namespace($this->namespace)
+             ->group(base_path('routes/coach/init.php'));
     }
 
     /**
