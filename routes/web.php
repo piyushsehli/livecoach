@@ -19,6 +19,9 @@ Route::get('/home', function () {
     return view('index');
 })->name('home');
 
+Route::get('/trial', function () {
+    return view('trial');
+})->name('trial');
 
 /* User Login And Register Routes */
 // Authentication Routes...

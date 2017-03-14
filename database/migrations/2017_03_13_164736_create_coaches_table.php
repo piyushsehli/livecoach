@@ -16,7 +16,7 @@ class CreateCoachesTable extends Migration
         Schema::create('coaches', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->nullable();
-            $table->string('email')->unique();
+            $table->string('email', 200)->unique();
             $table->string('password')->nullable();
             $table->boolean('verified')->default(false);
             $table->boolean('is_active')->default(true);

@@ -11,8 +11,8 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse pull-right">
           <ul class="nav navbar-nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">Start free trials</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/trial">Start free trials</a></li>
             <li><a href="#contact">For Coaches</a></li>
             <li><a href="#contact">FAQ</a></li>
             <li><a href="#contact">Contact Us</a></li>

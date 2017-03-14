@@ -8,6 +8,9 @@
     padding:10px 40px;
     margin-bottom: 0px;
 }
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+	color:#57BBBF;
+}
 #navbar{
 	position:relative;
 	top:5px;
@@ -587,3 +590,33 @@ textarea.trial-input{
 .specific-btn-con{
 	margin:12px 0px 2px -53px;
 }
+
+/* Testi-trial */
+#testi-trial{
+}
+#testi-trial .item{
+	padding:180px 0;
+}
+#testi-trial #carousel-example-generic{
+	width:100%;
+	background-color: #333;
+	color:#fff;
+	padding:100px 0px;
+
+}
+#testi-trial .carousel-caption{
+	width:35%;
+	text-align: center;
+	margin:auto;
+	padding:50px 0px;
+}
+#testi-trial .carousel-caption h3 span{
+	letter-spacing: 2px;
+	font-size: 19px;
+	border-bottom: 1px solid #fff;
+}
+#testi-trial .carousel-caption p{
+	margin:25px 0px;
+	font-size: 18px;
+}
+
