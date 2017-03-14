@@ -23,13 +23,36 @@ Route::get('/trial', function () {
     return view('trial');
 })->name('trial');
 
+
+/* Coach Login And Register Routes */
+Route::prefix('coach')->group(function(){
+	// Authentication Routes...
+	Route::post('login', 'CoachAuth\LoginController@login');
+	Route::post('logout', 'CoachAuth\LoginController@logout')->name('coach.logout');
+
+	// Registration Routes...
+	Route::post('register', 'CoachAuth\RegisterController@register')->name('coach.register');
+
+	// Password Reset Routes...
+	Route::get('password/reset', 'CoachAuth\ForgotPasswordController@showLinkRequestForm')->name('coach.password.request');
+	Route::post('password/email', 'CoachAuth\ForgotPasswordController@sendResetLinkEmail')->name('coach.password.email');
+	Route::get('password/reset/{token}', 'CoachAuth\ResetPasswordController@showResetForm')->name('coach.password.reset');
+	Route::post('password/reset', 'CoachAuth\ResetPasswordController@reset');
+
+	/*Account verification*/
+	Route::get('register/confirm/{token}', 'CoachAuth\ActivationController@confirmEmail');
+
+});
+
+
+
 /* User Login And Register Routes */
 // Authentication Routes...
 Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 // Registration Routes...
-Route::post('register', 'Auth\RegisterController@register');
+Route::post('register', 'Auth\RegisterController@register')->name('register');
 
 // Password Reset Routes...
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');

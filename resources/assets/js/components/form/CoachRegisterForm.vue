@@ -76,7 +76,7 @@
                     password_confirmation: '',
                     description: ''
                 }),
-                url:'/register'
+                url:'coach/register'
             }
         },
         props: ['slug'],

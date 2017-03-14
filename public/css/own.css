@@ -1,5 +1,7 @@
 /* Navbar section */
-
+body {
+	background-color: #fff;
+}
 .navbar{
 	background:#fff;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);

@@ -41,7 +41,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('guest:coach');
     }
 
     /**
@@ -111,5 +111,15 @@ class RegisterController extends Controller
         Mail::to($request->input('email'))->send($email);
 
         return 'success';
+    }
+
+    /**
+     * Get the guard to be used during registration.
+     *
+     * @return \Illuminate\Contracts\Auth\StatefulGuard
+     */
+    protected function guard()
+    {
+        return Auth::guard('auth:coach');
     }
 }
