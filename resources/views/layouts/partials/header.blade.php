@@ -13,9 +13,9 @@
           <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
             <li><a href="/trial">Start free trials</a></li>
-            <li><a href="#contact">For Coaches</a></li>
-            <li><a href="#contact">FAQ</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="/coaches">For Coaches</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/contact">Contact Us</a></li>
             @if(Auth::check())
                   <li><a href="javascript:void(0);" class="login " >Hi {{ Auth::user()->name }}</a></li>
                   <li>

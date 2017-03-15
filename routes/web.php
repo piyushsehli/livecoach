@@ -23,6 +23,19 @@ Route::get('/trial', function () {
     return view('trial');
 })->name('trial');
 
+Route::get('/coaches', function () {
+    return view('coaches');
+})->name('coaches');
+
+Route::get('/faq', function () {
+    return view('faq');
+})->name('faq');
+
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
+
 /* User Login And Register Routes */
 // Authentication Routes...
 Route::post('login', 'Auth\LoginController@login');
