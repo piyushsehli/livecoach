@@ -54,29 +54,36 @@ Route::prefix('coach')->group(function(){
 	/*Account verification*/
 	Route::get('register/confirm/{token}', 'CoachAuth\ActivationController@confirmEmail');
 
+	// /*Resend Account Email verification*/
+	// Route::get('confirmation/resend', 'Auth\ActivationController@show');
+	// Route::post('confirmation/resend', 'Auth\ActivationController@resend');
+
+
 });
 
-
 /* User Login And Register Routes */
-// Authentication Routes...
-Route::post('login', 'Auth\LoginController@login');
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+Route::group([],function(){
+	// Authentication Routes...
+	Route::post('login', 'Auth\LoginController@login');
+	Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
-// Registration Routes...
-Route::post('register', 'Auth\RegisterController@register')->name('register');
+	// Registration Routes...
+	Route::post('register', 'Auth\RegisterController@register')->name('register');
 
-// Password Reset Routes...
-Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
-Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
-Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
-Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+	// Password Reset Routes...
+	Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+	Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+	Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+	Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
-/*Account verification*/
-Route::get('register/confirm/{token}', 'Auth\ActivationController@confirmEmail');
+	/*Account verification*/
+	Route::get('register/confirm/{token}', 'Auth\ActivationController@confirmEmail');
 
-// /*Resend Account Email verification*/
-// Route::get('confirmation/resend', 'Auth\ActivationController@show');
-// Route::post('confirmation/resend', 'Auth\ActivationController@resend');
+	// /*Resend Account Email verification*/
+	// Route::get('confirmation/resend', 'Auth\ActivationController@show');
+	// Route::post('confirmation/resend', 'Auth\ActivationController@resend');
+
+});
 
 
 /* Social Login Routes */

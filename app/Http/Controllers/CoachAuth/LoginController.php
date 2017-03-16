@@ -26,7 +26,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -76,6 +76,6 @@ class LoginController extends Controller
      */
     protected function guard()
     {
-        return Auth::guard('auth:coach');
+        return Auth::guard('coach');
     }
 }

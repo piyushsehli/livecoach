@@ -17,7 +17,7 @@ class Coach extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'verified', 'description'
     ];
 
     /**
@@ -28,4 +28,10 @@ class Coach extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /*Relationships*/
+    public function activationToken()
+    {
+        return $this->hasOne(CoachActivationToken::class);
+    }
 }

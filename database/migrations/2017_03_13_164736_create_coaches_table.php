@@ -18,6 +18,7 @@ class CreateCoachesTable extends Migration
             $table->string('name')->nullable();
             $table->string('email', 200)->unique();
             $table->string('password')->nullable();
+            $table->text('description')->nullable();
             $table->boolean('verified')->default(false);
             $table->boolean('is_active')->default(true);
             $table->rememberToken();

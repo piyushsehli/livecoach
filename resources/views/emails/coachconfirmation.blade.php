@@ -3,7 +3,7 @@
 
 Please click the button to Confirm your Account
 
-@component('mail::button', ['url' =>  url('').'/register/confirm/' . $token->token ])
+@component('mail::button', ['url' =>  url('/coach/register/confirm/'. $token->token)  ])
 Confirm
 @endcomponent
 

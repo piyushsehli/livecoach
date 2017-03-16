@@ -22,7 +22,7 @@
                     email: '',
                     password: '',
                 }),
-                url:'/login'
+                url:'coach/login'
             }
         },
         props: ['slug'],

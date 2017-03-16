@@ -42697,7 +42697,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(46)();
-exports.push([module.i, "\n.bid-btn[data-v-1b6a33d8]{\n    color:white;\n    background-color: #fe980f;\n    margin:10px 0px;\n}\n.chat-btn[data-v-1b6a33d8]{\n    color:white;\n    background-color: #fe980f;\n    margin:10px 0px;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 /***/ }),
 /* 61 */
@@ -43579,6 +43579,545 @@ Vue.component('register-form', __webpack_require__(62));
 
 /*Forms with discription*/
 Vue.component('register-trial', __webpack_require__(63));
+
+/*Register forms for coach*/
+Vue.component('coach-register-form', __webpack_require__(76));
+Vue.component('coach-login-form', __webpack_require__(81));
+
+/***/ }),
+/* 74 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__form_Form__ = __webpack_require__(71);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = {
+    data: function data() {
+        return {
+            form: new __WEBPACK_IMPORTED_MODULE_0__form_Form__["a" /* default */]({
+                name: '',
+                email: '',
+                password: '',
+                password_confirmation: '',
+                description: ''
+            }),
+            url: 'coach/register'
+        };
+    },
+
+    props: ['slug'],
+    mounted: function mounted() {},
+
+    methods: {
+        onSubmit: function onSubmit() {
+            var _this = this;
+
+            this.form.post(this.url).then(function (res) {
+                _this.form.reset();
+                swal({
+                    title: 'Success',
+                    text: "Confirmation Email has been sent to you",
+                    type: 'success'
+                });
+            });
+        }
+    }
+};
+
+/***/ }),
+/* 75 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(46)();
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(78)
+
+var Component = __webpack_require__(53)(
+  /* script */
+  __webpack_require__(74),
+  /* template */
+  __webpack_require__(77),
+  /* scopeId */
+  "data-v-0fa06a68",
+  /* cssModules */
+  null
+)
+Component.options.__file = "C:\\wamp\\www\\projects\\github\\livecoach\\resources\\assets\\js\\components\\form\\CoachRegisterForm.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] CoachRegisterForm.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0fa06a68", Component.options)
+  } else {
+    hotAPI.reload("data-v-0fa06a68", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('form', {
+    on: {
+      "submit": function($event) {
+        $event.preventDefault();
+        _vm.onSubmit($event)
+      }
+    }
+  }, [_c('div', {
+    staticClass: "form-group-trial"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('label', {
+    staticClass: "trail-label"
+  }, [_vm._v("Name")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.form.name),
+      expression: "form.name"
+    }],
+    staticClass: "trial-input",
+    class: {
+      'has-error': _vm.form.errors.has('name')
+    },
+    attrs: {
+      "type": "text"
+    },
+    domProps: {
+      "value": (_vm.form.name)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.form.name = $event.target.value
+      }
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "form-group-trial"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('label', {
+    staticClass: "trail-label"
+  }, [_vm._v("Email")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.form.email),
+      expression: "form.email"
+    }],
+    staticClass: "trial-input",
+    class: {
+      'has-error': _vm.form.errors.has('email')
+    },
+    attrs: {
+      "type": "email"
+    },
+    domProps: {
+      "value": (_vm.form.email)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.form.email = $event.target.value
+      }
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "form-group-trial"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('label', {
+    staticClass: "trail-label"
+  }, [_vm._v("Password")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.form.password),
+      expression: "form.password"
+    }],
+    staticClass: "trial-input",
+    class: {
+      'has-error': _vm.form.errors.has('password')
+    },
+    attrs: {
+      "type": "password"
+    },
+    domProps: {
+      "value": (_vm.form.password)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.form.password = $event.target.value
+      }
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "form-group-trial"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('label', {
+    staticClass: "trail-label"
+  }, [_vm._v("Confirm Password")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.form.password_confirmation),
+      expression: "form.password_confirmation"
+    }],
+    staticClass: "trial-input",
+    class: {
+      'has-error': _vm.form.errors.has('password_confirmation')
+    },
+    attrs: {
+      "type": "password"
+    },
+    domProps: {
+      "value": (_vm.form.password_confirmation)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.form.password_confirmation = $event.target.value
+      }
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "form-group-trial"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('label', {
+    staticClass: "trail-label"
+  }, [_vm._v("What would you like to work on?")]), _vm._v(" "), _c('textarea', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.form.description),
+      expression: "form.description"
+    }],
+    staticClass: "trial-input",
+    class: {
+      'has-error': _vm.form.errors.has('description')
+    },
+    domProps: {
+      "value": (_vm.form.description)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.form.description = $event.target.value
+      }
+    }
+  })])]), _vm._v(" "), (_vm.form.errors.any()) ? _c('span', {
+    staticClass: "text-danger pull-left"
+  }, [(_vm.form.errors.has('email')) ? _c('strong', {
+    domProps: {
+      "textContent": _vm._s(_vm.form.errors.get('email'))
+    }
+  }) : _c('strong', [_vm._v("Please add required info.")])]) : _vm._e(), _vm._v(" "), _c('button', {
+    staticClass: "pull-right btn-register"
+  }, [_vm._v("Start Trial")])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-0fa06a68", module.exports)
+  }
+}
+
+/***/ }),
+/* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(75);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(54)("19663b48", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-0fa06a68&scoped=true!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./CoachRegisterForm.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-0fa06a68&scoped=true!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./CoachRegisterForm.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 79 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__form_Form__ = __webpack_require__(71);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = {
+    data: function data() {
+        return {
+            form: new __WEBPACK_IMPORTED_MODULE_0__form_Form__["a" /* default */]({
+                email: '',
+                password: ''
+            }),
+            url: 'coach/login'
+        };
+    },
+
+    props: ['slug'],
+    mounted: function mounted() {},
+
+    methods: {
+        onSubmit: function onSubmit() {
+            this.form.post(this.url).then(function (res) {
+                location.reload();
+            });
+        }
+    }
+};
+
+/***/ }),
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(46)();
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(83)
+
+var Component = __webpack_require__(53)(
+  /* script */
+  __webpack_require__(79),
+  /* template */
+  __webpack_require__(82),
+  /* scopeId */
+  "data-v-2b8d7158",
+  /* cssModules */
+  null
+)
+Component.options.__file = "C:\\wamp\\www\\projects\\github\\livecoach\\resources\\assets\\js\\components\\form\\CoachLoginForm.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] CoachLoginForm.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2b8d7158", Component.options)
+  } else {
+    hotAPI.reload("data-v-2b8d7158", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('form', {
+    staticClass: "row",
+    on: {
+      "submit": function($event) {
+        $event.preventDefault();
+        _vm.onSubmit($event)
+      }
+    }
+  }, [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.form.email),
+      expression: "form.email"
+    }],
+    staticClass: "sign-input danger",
+    attrs: {
+      "type": "Email",
+      "name": "email",
+      "placeholder": "Email",
+      "required": ""
+    },
+    domProps: {
+      "value": (_vm.form.email)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.form.email = $event.target.value
+      }
+    }
+  }), _vm._v(" "), (_vm.form.errors.has('email')) ? _c('p', {
+    staticClass: "text-danger"
+  }, [_vm._v("These credentials do not match our records.")]) : _vm._e(), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.form.password),
+      expression: "form.password"
+    }],
+    staticClass: "sign-input",
+    attrs: {
+      "type": "password",
+      "name": "password",
+      "placeholder": "Password",
+      "required": ""
+    },
+    domProps: {
+      "value": (_vm.form.password)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.form.password = $event.target.value
+      }
+    }
+  }), _vm._v(" "), (_vm.form.errors.has('password')) ? _c('p', {
+    staticClass: "text-danger",
+    domProps: {
+      "textContent": _vm._s(_vm.form.errors.get('password'))
+    }
+  }) : _vm._e(), _vm._v(" "), _c('button', {
+    staticClass: "sign-button"
+  }, [_vm._v("GO")])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-2b8d7158", module.exports)
+  }
+}
+
+/***/ }),
+/* 83 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(80);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(54)("fdfb6c46", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-2b8d7158&scoped=true!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./CoachLoginForm.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-2b8d7158&scoped=true!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./CoachLoginForm.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);

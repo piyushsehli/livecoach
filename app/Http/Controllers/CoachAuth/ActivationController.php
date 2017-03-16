@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\CoachAuth;
 
 use App\User;
-use App\ActivationToken;
+use App\CoachActivationToken;
 use App\Mail\CoachConfirmationEmail;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -20,7 +20,7 @@ class ActivationController extends Controller
      */
     public function confirmEmail($token)
     {
-        $token = ActivationToken::where('token', $token)->first();
+        $token = CoachActivationToken::where('token', $token)->first();
 
         if(!$token){
             alert()->info('Your Account has already been confirmed');
@@ -28,13 +28,13 @@ class ActivationController extends Controller
             return redirect('/');
         }
 
-        $token->user()->update([
+        $token->coach()->update([
             'verified' => true
         ]);
 
         $token->delete();
 
-        Auth::login($token->user);
+        Auth::guard('coach')->login($token->coach);
 
         alert()->success('you are now LoggedIn', 'Account Confirmed');
 
